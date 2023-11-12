@@ -65,7 +65,7 @@ function makeRefence(number) {
 }
 
 function loadData(file) {
-    const path = w `https://ev.logannoel.com/data/${file}`;
+    const path = `https://ev.logannoel.com/data/${file}`;
     const xhr = new XMLHttpRequest();
 
     xhr.overrideMimeType("application/json");
