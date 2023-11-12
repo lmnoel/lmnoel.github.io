@@ -1,0 +1,48 @@
+.centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.results {
+    background-color: silver;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 3px;
+}
+
+.variable {
+    margin: 2px; 
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.inputVariable {
+    background-color: beige; 
+
+}
+
+.derivedVariableBad {
+    background-color: palevioletred; 
+}
+
+.derivedVariable {
+    background-color: lightgreen; 
+}
+
+sup {
+    margin: 2px;
+    opacity: 50%;
+}
+
+footer {
+    position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      background-color: lightblue;
+  }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<!-- be warned - I am not a front end developer, and do not know what I am doing here -->
+  <head>
+    <title>EV CO2 Breakeven Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <header>
+      <h1>Electric Vehicle CO2 Emission Breakeven Calculator</h1>
+    </header>
+    <main>
+      <div class="centered-div">
+        <form id="carCalculatorForm">
+          <label for="mileage">Gas mileage of current gas car (MPG):</label>
+          <input type="number" id="mileage" required value="25">
+          <br>
+
+          <label for="milesDriven">Miles driven per year:</label>
+          <input type="number" id="milesDriven" required>
+          <br>
+
+          <label>Primary charging source:</label>
+          <input type="radio" id="gridPower" name="powerSource" value="grid" required checked>
+          <label for="gridPower">Grid power</label>
+          <input type="radio" id="solarPower" name="powerSource" value="solar" required>
+          <label for="solarPower">Solar power</label>
+          <br>
+          <div id="stateSelector">
+            <label for="state">State:</label>
+            <select id="state">
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+
+          <div id="evSelector">
+            <label for="ev">Electric vehicle:</label>
+            <select id="ev">
+
+            </select>
+          </div>
+
+          <br>
+
+          <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result" class="results" style="display: none;">
+          <p id="resultContent" />
+
+          </p>
+          <div id="references">
+            <h3>References</h3>
+            <ol>
+              <li><a href="https://www.eia.gov/environment/emissions/co2_vol_mass.php" target="_blank" />EIA Carbon Dioxide Emissions Coefficients</a> </li>
+              <li><a href="https://www.eia.gov/environment/emissions/state/" target="_blank">EIA State emissions (2022 Data)</a></li>
+              <li><a href="https://www.eia.gov/energyexplained/units-and-calculators/british-thermal-units.php" target="_blank">EIA Energy Conversion Factors</a></li>
+              <li><a href="https://www.kaggle.com/datasets/geoffnel/evs-one-electric-vehicle-dataset/" target="_blank">EVs - One Electric Vehicle Dataset</a></li>
+              <li><a href="https://www.ivl.se/download/18.34244ba71728fcb3f3faf9/1591706083170/C444.pdf/" target="_blank">Lithium-Ion Vehicle Battery Production</a></li>
+
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <footer>
+        <p><a href="https://github.com/lmnoel/lmnoel.github.io" />Github</p>
+      </footer>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+
+</html>
